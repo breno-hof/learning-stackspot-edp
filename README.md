@@ -21,3 +21,9 @@ git clone https://github.com/stack-spot/stackspot-workflows-action.git
 cd stackspot-workflows-action/
 stk run action .
 ```
+
+## Criando um plugin
+
+```sh
+stk create plugin my-first-plugin
+```
