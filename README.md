@@ -25,5 +25,5 @@ stk run action .
 ## Criando um plugin
 
 ```sh
-stk create plugin my-first-plugin
+stk create plugin
 ```
