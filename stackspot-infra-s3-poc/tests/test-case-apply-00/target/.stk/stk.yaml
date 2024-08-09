@@ -1,13 +1,19 @@
 schema-version: v2
 kind: manifest
-metadata:
-  name: custom-app
-  description: Default description
-  starter: temp-test-studio/temp-test-stack@0.0.1/temp-test-starter
-  stack-version-id: 01234567890123456789012345
-  stack: temp-test-stack@0.0.1
 spec:
-  type: infra
-  plugins: []
+  type: app
+  plugins:
+    - name: local/stackspot-infra-s3-poc@0.0.1
+      alias: stackspot-infra-s3-poc-1723051015687
+      type: infra
+      inputs:
+        bucket_name: Bucket
+        force_destroy: true
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
   global-inputs: {}
   global-computed-inputs: {}

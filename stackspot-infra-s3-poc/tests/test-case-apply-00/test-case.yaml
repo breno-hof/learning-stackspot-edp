@@ -4,10 +4,13 @@ spec:
   type: plugin
   mode: apply
   inputs:
-    resource: "Customer"
-    method: "PATCH"
+    bucket_name: "Bucket"
+    force_destroy: True
   inputs-envs: {}
   requires:
     connections: []
   generates:
-    connections: []
+    connections:
+      - type: aws-s3-conn
+        selected: my-new-s3
+        alias:  aws-s3-connection-interface
