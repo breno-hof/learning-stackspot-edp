@@ -1,0 +1,12 @@
+schema-version: v1
+kind: stack
+metadata:
+  name: stack-poc-cli
+  display-name: stack-poc-cli
+  description: A stack proof-of-concept created from CLI
+  version: 0.0.1
+spec:
+  repository: https://github.com/breno-hof/learning-stackspot-edp
+  docs:
+    en-us: docs/en_us/docs.md
+    pt-br: docs/pt_br/docs.md
