@@ -10,3 +10,13 @@ spec:
   docs:
     en-us: docs/en_us/docs.md
     pt-br: docs/pt_br/docs.md
+  links:
+    - name: Stack Proof-of-concept CLI Link
+      url: https://www.google.com/
+      picture: stack-poc-cli-image.png
+  plugins:
+    infra:
+      - name: studio-poc/stackspot-infra-s3-poc@0.0.1
+  starters:
+    - name: starter-poc-cli
+      path: starters/starter-poc-cli

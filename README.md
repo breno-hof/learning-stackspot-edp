@@ -6,8 +6,6 @@
 curl -fsSL https://stk.stackspot.com/install.sh | bash
 ```
 
-## Initial Settings
-
 ## Working with plugins
 Plugin adds capabilities to an Application, it is like a building block that follows some standards and good practices. In the context of StackSpot, a Plugin is always associated with a Studio and may have the same name in different Studios.
 
@@ -39,4 +37,21 @@ Publishing on StackSpot means storing and making the contents of Stacks, Plugins
 
 ```sh
 stk publish plugin --studio <studio_name>
+```
+
+## Working with Stack
+A Stack is a group of technologies necessary for an Application to exist, which can range from code to the Infrastructure used to provide the application.
+
+### Create a new Stack (CLI)
+
+```sh
+stk create stack
+```
+
+## Working with Starters
+Starters are useful for Stack creators to define common Plugin combinations within the Stack itself, and define "ready-made recipes" for the most common combinations within the Stack. In it, you can add as many Plugins as you want.
+
+### Create a new Starter (CLI)
+```sh
+stk create starter
 ```
