@@ -12,12 +12,12 @@ spec:
     en-us: docs/en-us/docs.md
   repository: https://github.com/breno-hof/learning-stackspot-edp
   inputs:
-    - label: What is your name?
-      name: user_name
+    - label: What is the bucket name?
+      name: bucket_name
       type: text
       required: false
       pattern: '^[A-Za-z]+(?:\s[A-Za-z]+)*$'
-      help: 'Inform your name'
+      help: 'Inform the bucket name'
   shell:
     workdir: .
     requirements-check:
@@ -31,8 +31,8 @@ spec:
         info: "Git is not installed!"
     script:
       linux: |
-        echo "Hello {{inputs.user_name}}!"
+        stk validate action
       mac: |
-        echo "Hello {{inputs.user_name}}!"
+        stk validate action
       windows: |
-        echo "Hello {{inputs.user_name}}!"
+        stk validate action

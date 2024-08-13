@@ -55,3 +55,11 @@ Starters are useful for Stack creators to define common Plugin combinations with
 ```sh
 stk create starter
 ```
+
+## Working with Actions
+At StackSpot, Actions is a structure that gives intelligence to scripts to execute automation locally on your machine. It is possible to use inputs and files that interact with your script to automate a process, or even facilitate bureaucratic processes in your organization.
+
+### Create a new Action (CLI)
+```sh
+stk create action <ACTION_NAME> --type <ACTION_TYPE>
+```
