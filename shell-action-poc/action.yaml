@@ -1,0 +1,38 @@
+schema-version: v3
+kind: action
+metadata:
+  name: shell-action-poc
+  display-name: shell-action-poc
+  description: A proof-of-concept shell action to learn how to create shell actions 
+  version: 0.0.1
+spec:
+  type: shell
+  docs:
+    pt-br: docs/pt-br/docs.md
+    en-us: docs/en-us/docs.md
+  repository: https://github.com/breno-hof/learning-stackspot-edp
+  inputs:
+    - label: What is your name?
+      name: user_name
+      type: text
+      required: false
+      pattern: '^[A-Za-z]+(?:\s[A-Za-z]+)*$'
+      help: 'Inform your name'
+  shell:
+    workdir: .
+    requirements-check:
+      - check-command:
+          linux: |
+            git --version
+          mac: |
+            git --version
+          windows: |
+            git --version
+        info: "Git is not installed!"
+    script:
+      linux: |
+        echo "Hello {{inputs.user_name}}!"
+      mac: |
+        echo "Hello {{inputs.user_name}}!"
+      windows: |
+        echo "Hello {{inputs.user_name}}!"
